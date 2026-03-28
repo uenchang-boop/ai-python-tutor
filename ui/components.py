@@ -189,8 +189,8 @@ def render_function_card(func: dict, explanation: dict, relations: dict):
     return_explain_html = ""
     if return_xp and return_xp.strip() not in ("", "無", "none", "None"):
         return_explain_html = (
-            f'<div style="margin:8px 0 0;font-size:12px;color:#6B6B6B;">'
-            f'<span style="font-weight:600;">↩ 回傳：</span>{_html.escape(return_xp)}</div>'
+            f'<div class="return-explain">'
+            f'<span class="return-explain-label">↩ 回傳：</span>{_html.escape(return_xp)}</div>'
         )
 
     # 呼叫關係
