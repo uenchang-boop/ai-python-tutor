@@ -189,8 +189,8 @@ def render_function_card(func: dict, explanation: dict, relations: dict):
     return_explain_html = ""
     if return_xp and return_xp.strip() not in ("", "無", "none", "None"):
         return_explain_html = (
-            f'<div style="margin:8px 0 0;font-size:12px;color:#6B6B6B;">'
-            f'<span style="font-weight:600;">↩ 回傳：</span>{_html.escape(return_xp)}</div>'
+            f'<div class="return-explain">'
+            f'<span class="return-explain-label">↩ 回傳：</span>{_html.escape(return_xp)}</div>'
         )
 
     # 呼叫關係
@@ -203,10 +203,7 @@ def render_function_card(func: dict, explanation: dict, relations: dict):
         calls_html = f'<div class="call-relation">📤 呼叫了：{chips}</div>'
     if called_by:
         chips          = " ".join(f'<span class="call-chip">{_html.escape(c)}</span>' for c in called_by)
-        called_by_html = (
-            f'<div class="call-relation" style="background:#FFF7ED;color:#C2410C;">'
-            f'📥 被呼叫：{chips}</div>'
-        )
+        called_by_html = f'<div class="call-relation-calledby">📥 被呼叫：{chips}</div>'
 
     src_badge  = _source_badge(source)
     comp_badge = _complexity_badge(complexity)

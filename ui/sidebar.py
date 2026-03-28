@@ -130,7 +130,7 @@ def render_sidebar() -> dict:
                 st.error(f"❌ {err or 'API Key 有誤'}", icon=None)
             mode = provider
         else:
-            st.warning("⚠️ 請輸入 API Key", icon=None)
+            st.caption("💡 請輸入 API Key 以啟用 AI 解釋功能")
             mode = "offline"
 
         # API 呼叫錯誤提示
