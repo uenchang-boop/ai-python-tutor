@@ -203,10 +203,7 @@ def render_function_card(func: dict, explanation: dict, relations: dict):
         calls_html = f'<div class="call-relation">📤 呼叫了：{chips}</div>'
     if called_by:
         chips          = " ".join(f'<span class="call-chip">{_html.escape(c)}</span>' for c in called_by)
-        called_by_html = (
-            f'<div class="call-relation" style="background:#FFF7ED;color:#C2410C;">'
-            f'📥 被呼叫：{chips}</div>'
-        )
+        called_by_html = f'<div class="call-relation-calledby">📥 被呼叫：{chips}</div>'
 
     src_badge  = _source_badge(source)
     comp_badge = _complexity_badge(complexity)

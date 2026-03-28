@@ -175,6 +175,15 @@ def inject_theme():
         margin-top: 10px;
         line-height: 1.8;
     }
+    .call-relation-calledby {
+        font-size: 12px;
+        color: #C2410C;
+        background: #FFF7ED;
+        padding: 6px 12px;
+        border-radius: 6px;
+        margin-top: 10px;
+        line-height: 1.8;
+    }
     .call-chip {
         display: inline-block;
         background: #EDE9FE;
